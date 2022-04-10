@@ -75,9 +75,9 @@
                 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB | F1/1| F2/2| F3/3| F4/4| F5/5|   | F6/6| F7/7| F8/8| F9/9| F10/0| BKSP |
-// | CTRL |     |     |     |     |     |   | LFT | DWN |  UP | RGT | F11 | F12   |
-// | SHFT | BT1 | BT2 | BT3 | BT4 |USBTt|   |     |     |     |     |     |       |
+// |  TAB | F1/1| F2/2| F3/3| F4/4| F5/5|   | F6/6| F7/7| F8/8| F9/9|F10/0| BKSP |
+// | CTRL |     |     |     |     |     |   | LFT | DWN |  UP | RGT | F11 | F12  |
+// | SHFT | BT1 | BT2 | BT3 | BT4 |USBTt|   |     |     |     |     |     |      |
 //                    | GUI |     |     |   |     |     | ALT |
                         bindings = <
    &kp TAB    &mt F1 N1    &mt F2 N2    &mt F3 N3     &mt F4 N4    &mt F5 N5      &mt F6 N6  &mt F7 N7  &mt F8 N8  &mt F9 N9  &mt F10 N0  &kp BSPC
@@ -109,7 +109,7 @@
 //                    | GUI |     | SPC |   |     |     |     |
                         bindings = <
    &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                     &bt BT_SEL 3                    &out OUT_TOG                       &kp C_VOL_UP    &kp K_VOL_UP      &trans   &trans  &trans  &trans
-   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI                  &trans                          &trans                             &kp C_VOL_DOWN  &kp K_VOL_DOWN    &trans   &trans  &trans  &trans
+   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans                           &trans                          &trans                             &kp C_VOL_DOWN  &kp K_VOL_DOWN    &trans   &trans  &trans  &trans
    &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_COLOR_HSB(206,20,94) &rgb_ug RGB_COLOR_HSB(65,0,100) &rgb_ug RGB_COLOR_HSB(65,100,100)  &trans          &trans            &trans   &trans  &trans  &trans
                                      &trans           &trans                           &trans                                                             &trans          &trans            &trans
                         >;

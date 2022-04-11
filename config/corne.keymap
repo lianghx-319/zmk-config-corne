@@ -66,10 +66,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |   B    |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SFT-SPC|   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &mt LSHIFT SPACE   &kp RET &mo 2 &mt RALT DEL
+   &kp TAB   &kp Q  &kp W  &kp E     &kp R  &kp T              &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+   &kp LCTRL &kp A  &kp S  &kp D     &kp F  &kp G              &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+   &kp LSHFT &kp Z  &kp X  &kp C     &kp V  &kp B              &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                           &kp LGUI  &mo 1  &mt LSHIFT SPACE   &kp RET  &mo 2  &mt RALT DEL
                         >;
                 };
                 
@@ -94,10 +94,10 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   |     |     | ALT |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK  &kp LPAR &kp RPAR &kp DEL
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT   &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC   &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI    &mo 3    &trans      &trans  &trans    &trans
+   &kp TAB    &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT   &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp DEL
+   &kp LCTRL  &trans    &trans  &kp PSCRN  &kp HOME  &kp PG_UP   &kp MINUS  &kp EQUAL &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+   &kp LSHFT  &trans    &trans  &trans     &kp END   &kp PG_DN   &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                    	           &kp LGUI   &mo 3     &trans      &trans     &trans    &trans
                         >;
                 };
 
@@ -108,10 +108,10 @@
 // | RGBef| RGB-|RGBsd| Blue|White|Green|   |     |     |     |     |     |     |
 //                    | GUI |     | SPC |   |     |     |     |
                         bindings = <
-   &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                     &bt BT_SEL 3                    &out OUT_TOG                       &trans          &trans            &trans   &trans  &trans  &trans
-   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI                  &trans                          &trans                             &trans          &trans            &trans   &trans  &trans  &trans
-   &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_COLOR_HSB(206,20,94) &rgb_ug RGB_COLOR_HSB(65,0,100) &rgb_ug RGB_COLOR_HSB(65,100,100)  &trans          &trans            &trans   &trans  &trans  &trans
-                                     &trans           &trans                           &trans                                                             &trans          &trans            &trans
+   &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                     &bt BT_SEL 3                    &out OUT_TOG                       &kp C_VOL_UP    &kp K_VOL_UP  &trans   &trans  &trans  &trans
+   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI                  &trans                          &trans                             &kp C_VOL_DN    &kp K_VOL_DN  &trans   &trans  &trans  &trans
+   &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_COLOR_HSB(206,20,94) &rgb_ug RGB_COLOR_HSB(65,0,100) &rgb_ug RGB_COLOR_HSB(65,100,100)  &trans          &trans        &trans   &trans  &trans  &trans
+                                     &trans           &trans                           &trans                                                             &trans          &trans        &trans
                         >;
                 };
         };

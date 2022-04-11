@@ -108,8 +108,8 @@
 // | RGBef| RGB-|RGBsd| Blue|White|Green|   |     |     |     |     |     |     |
 //                    | GUI |     | SPC |   |     |     |     |
                         bindings = <
-   &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                     &bt BT_SEL 3                    &out OUT_TOG                       &kp C_VOL_UP    &kp K_VOL_UP      &trans   &trans  &trans  &trans
-   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans                           &trans                          &trans                             &kp C_VOL_DOWN  &kp K_VOL_DOWN    &trans   &trans  &trans  &trans
+   &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                     &bt BT_SEL 3                    &out OUT_TOG                       &trans          &trans            &trans   &trans  &trans  &trans
+   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI                  &trans                          &trans                             &trans          &trans            &trans   &trans  &trans  &trans
    &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_COLOR_HSB(206,20,94) &rgb_ug RGB_COLOR_HSB(65,0,100) &rgb_ug RGB_COLOR_HSB(65,100,100)  &trans          &trans            &trans   &trans  &trans  &trans
                                      &trans           &trans                           &trans                                                             &trans          &trans            &trans
                         >;

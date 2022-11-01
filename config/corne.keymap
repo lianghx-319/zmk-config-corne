@@ -87,7 +87,7 @@ behaviors {
 // -----------------------------------------------------------------------------------------
 // |FN/TAB|  Q  |  W  |  E  |  R  |   T    |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |   G    |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |   B    |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+// | SHFT |  Z  |  X  |  C  |  V  |   B    |   |  N  |  M   |  ,  |  .  |  /  |ESC/GUI|
 //              |LALKST/GUI | LWR | SFT-SPC|   | ENT |  RSE | DEL/ALT |
                         bindings = <
    &lt 4 TAB    &kp Q  &kp W  &kp E     &kp R  &kp T              &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC

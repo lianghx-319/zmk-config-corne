@@ -86,14 +86,14 @@ behaviors {
 /*
  * mouse conf
  */
-&mmv {    
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent=<1>;
-};
-&mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
-};
+//&mmv {    
+//        time-to-max-speed-ms = <500>;
+//        acceleration-exponent=<1>;
+//};
+//&mwh {    
+//        time-to-max-speed-ms = <2000>;
+//        acceleration-exponent=<0>;
+//};
 
 /*
  * 

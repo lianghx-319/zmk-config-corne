@@ -12,7 +12,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/led/led.h> /* led id */
 #include <dt-bindings/zmk/outputs.h> /* to be able to select usb or bluetooth */
-#include <dt-bindings/zmk/mouse.h> /* to be able to use keyboard mouse */
+//#include <dt-bindings/zmk/mouse.h> /* to be able to use keyboard mouse */
 
 /*
  * Temporarily here because nice nano v2 spi is not defined on ZMk Yet

@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h> /* led id */
 #include <dt-bindings/zmk/outputs.h> /* to be able to select usb or bluetooth */
+#include <dt-bindings/zmk/mouse.h> /* to be able to use keyboard mouse */
 
 /*
  * Temporarily here because nice nano v2 spi is not defined on ZMk Yet
@@ -80,6 +81,69 @@ behaviors {
         };
      };
 
+/*
+ * mouse conf
+ */
+&mmv {    
+        time-to-max-speed-ms = <500>;
+        acceleration-exponent=<1>;
+};
+&mwh {    
+        time-to-max-speed-ms = <2000>;
+        acceleration-exponent=<0>;
+};
+
+/*
+ * 
+ * to do : template
+ *
+ */
+
+/*
+ * 
+ * to do : alias layer
+ * #define LOWER 1
+ * #define RAISE 2
+ * #define SHIFT 3
+ * #define OPTION 4
+ * #define LOCK 5
+ *
+ */
+
+
+/*
+ * 
+ * to do : conditionnal layer
+ * 
+ *     conditional_layers {
+ *         compatible = "zmk,conditional-layers";
+ * 
+ *         tri_layer {
+ *             if-layers = <LOWER RAISE>;
+ *             then-layer = <OPTION>;
+ *         };
+ *     };
+ * 
+ */
+
+/*
+ * 
+ * to do : macros
+ *
+ * macros {
+ *         macro1: macro1 {
+ *             compatible = "zmk,behavior-macro";
+ *             label = "new_macro";
+ *             #binding-cells = <0>;
+ *             bindings = <&kp P &kp DOT &kp T &kp KP_MULTIPLY &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_8 &kp NUMBER_1 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_9 &kp NUMBER_9 &kp NUMBER_0 &kp NUMBER_2 &kp PLUS &kp T &kp DOT &kp T &kp KP_MULTIPLY &kp PLUS &kp R &kp DOT &kp H>;
+ *         };
+ *     };
+ *
+ */
+
+/*
+ * keymap
+ */
         keymap {
                 compatible = "zmk,keymap";
 

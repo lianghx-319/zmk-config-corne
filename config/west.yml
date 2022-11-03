@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-#    - name: ftc
-#      url-base: https://github.com/ftc
+    - name: ftc
+      url-base: https://github.com/ftc
     - name: petejohanson
       url-base: https://github.com/petejohanson
   projects:

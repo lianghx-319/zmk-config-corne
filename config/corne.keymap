@@ -70,7 +70,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings =
-                <&kp SPC>,
+                <&kp LALT>,
                 <&mo 3>;
         };
         td1: tap_dance_1 {
@@ -151,14 +151,14 @@
             // -----------------------------------------------------------------------------------------
             // |FN/TAB|  Q  |  W  |  E  |  R  |   T    |   |  Y  |  U   |    I    |  O  |  P  | BKSP   |
             // | CTRL |  A  |  S  |  D  |  F  |   G    |   |  H  |  J   |    K    |  L  |  ;  |  '     |
-            // | SHFT |  Z  |  X  |  C  |  V  |   B    |   |  N  |  M   |    ,    |  .  |  /  |ESC/RSFT|
-            //              |LALKST/GUI | LWR | SFT-SPC|   | ENT |  RSE | DEL/ALT |
+            // |SFT/CP|  Z  |  X  |  C  |  V  |   B    |   |  N  |  M   |    ,    |  .  |  /  |ESC/RSFT|
+            //              |  LALK/FUN | LWR | SFT-SPC|   | ENT |  RSE | DEL/ALT |
 
             bindings = <
  &mt LEFT_GUI TAB   &kp Q   &kp W     &kp E   &kp R             &kp T         &kp Y   &kp U        &kp I    &kp O     &kp P                &kp BSPC
         &kp LCTRL   &kp A   &kp S     &kp D   &kp F             &kp G         &kp H   &kp J        &kp K    &kp L  &kp SEMI  &mt RCTRL SINGLE_QUOTE
-        &kp LSHFT   &kp Z   &kp X     &kp C   &kp V             &kp B         &kp N   &kp M    &kp COMMA  &kp DOT  &kp FSLH           &mt RSHFT ESC
-                        &kp LALT   &mo LOWER  &td0              &lt NAV ENTER &mo RAISE  &mt RALT DEL
+        &td1   &kp Z   &kp X     &kp C   &kp V             &kp B         &kp N   &kp M    &kp COMMA  &kp DOT  &kp FSLH           &mt RSHFT ESC
+                        &kp LALT   &mo LOWER  &mt LSHFT SPC     &lt NAV ENTER &mo RAISE  &mt RALT DEL
             >;
         };
 
@@ -224,10 +224,10 @@
             //                     |     |     | SPC |   |     |     |     |
 
             bindings = <
-           &none            &none            &none            &none            &none  &kp PRINTSCREEN  &kp KP_NUMLOCK      &kp CAPS  &kp SCROLLLOCK         &none         &none         &none
- &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI            &none      &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG
- &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD           &trans           &none         &none           &none         &none         &none         &none
-                                                             &trans           &trans           &trans          &trans        &trans          &trans
+            &bootloader      &none            &none            &none            &none                   &kp PRINTSCREEN &kp KP_NUMLOCK  &kp CAPS    &kp SCROLLLOCK &none         &none         &none
+            &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI         &none           &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG
+            &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD         &trans          &none       &none           &none          &none         &none         &none
+                                              &trans           &trans           &trans                  &trans          &trans      &trans
             >;
         };
     };

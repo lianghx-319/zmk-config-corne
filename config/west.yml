@@ -6,10 +6,12 @@ manifest:
       url-base: https://github.com/ftc
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: caksoylar
+      revision: mods-widget
       import: app/west.yml
 #   - name: zmk
 #      remote: ftc

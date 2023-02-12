@@ -101,7 +101,7 @@
  * to do : alias layer 
  */
 
-    #define BASE 0   
+#define BASE 0   
 #define LOWER 1
 #define RAISE 2
 #define FUN 3
@@ -148,7 +148,7 @@
             // |SFT/CP|  Z  |  X  |  C  |  V  |   B    |   |  N  |  M   |    ,    |  .  |  /  |ESC/RSFT|
             //              | LALT| LWR/FUN | SFT-SPC|   | ENT |  RSE | DEL/ALT |
 
-            label = "_BASE";
+            label = "DEFAULT";
             bindings = <
 &mt LEFT_GUI TAB  &kp Q  &kp W     &kp E  &kp R          &kp T          &kp Y      &kp U         &kp I    &kp O     &kp P                &kp BSPC
        &kp LCTRL  &kp A  &kp S     &kp D  &kp F          &kp G          &kp H      &kp J         &kp K    &kp L  &kp SEMI  &mt RCTRL SINGLE_QUOTE
@@ -163,7 +163,7 @@
             // |      |     |LEFT | DOWN|  UP |RIGHT|   |     |  -  |  =  |  (  |  )  |   \  |
             // |      | BT1 | BT2 | BT3 | BT4 |USBTt|   |     |     |     |     |     |      |
             //                    | GUI |     |     |   |     |     | ALT |
-
+            label = "MUMBER";
             bindings = <
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
@@ -178,7 +178,7 @@
             // |      |      |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
             // |      |      |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                     |     |     |     |   |     |     |     |
-
+            label = "SETTING";
             bindings = <
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
@@ -193,7 +193,7 @@
             // |      | F6  | F7  | F8  | F9  | F10 |   |  *  |  4  |  5  |  6  | ,/. |     |
             // |      | F11 | F12 |     |     |     |   |  /  |  1  |  2  |  3  |  0  |  =  |
             //                    |     |     | SPC |   |     |     |     |
-
+            label = "NUMBER";
             bindings = <
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
@@ -203,6 +203,7 @@
         };
 
         GAME {
+            label = "GAME";        
             bindings = <
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
@@ -217,7 +218,7 @@
             // |      |  RGB+|RGBsi| Hue |     |     |   |  *  |  4  |  5  |  6  |  .  |     |
             // |      |  RGB-|RGBsd| Blue|White|Green|   |  /  |  1  |  2  |  3  |  0  |  =  |
             //                     |     |     | SPC |   |     |     |     |
-
+            label = "MEDIA";
             bindings = <
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
 &none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
@@ -227,6 +228,7 @@
         };
 
         LOCK {
+            label = "LOCK";       
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -236,6 +238,7 @@
         };
 
         SYMBOLS {
+            label = "SYMBOLS";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans

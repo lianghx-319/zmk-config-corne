@@ -220,12 +220,11 @@
             // |      |  RGB-|RGBsd| Blue|White|Green|   |  /  |  1  |  2  |  3  |  0  |  =  |
             //                     |     |     | SPC |   |     |     |     |
 
+            label = "SETTING";
             bindings = <
-    &bootloader            &none            &none            &none            &none  &kp PRINTSCREEN  &kp KP_NUMLOCK      &kp CAPS  &kp SCROLLLOCK         &none         &none         &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI            &none      &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG
-&rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD           &trans           &none         &none           &none         &none         &none         &none
-                                                            &trans           &trans           &trans          &trans        &trans          &trans
+ &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &rgb_ug RGB_ON  &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+ &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &rgb_ug RGB_OFF           &reset            &bt BT_NXT  &out OUT_USB  &out OUT_BLE  &out OUT_TOG    &bt BT_PRV      &reset
+           &to 1            &to 2            &to 4            &to 5            &to 6            &to 7                 &to 8        &trans        &trans        &trans        &trans      &trans
+                                                             &trans           &trans           &trans                &tog 3        &trans        &trans
             >;
         };
-    };
-};

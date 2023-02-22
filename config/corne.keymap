@@ -209,10 +209,10 @@
         DEFAULT {
             label = "DEFAULT";
             bindings = <
-      &kp CAPS  &kp Q  &kp W     &kp E      &kp R      &kp T    &kp Y        &kp U      &kp I    &kp O     &kp P       &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S     &kp D      &kp F      &kp G    &kp H        &kp J      &kp K    &kp L  &kp SEMI       &kp APOS
-     &kp LCTRL  &kp Z  &kp X     &kp C      &kp V      &kp B    &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT ESC
-                              &kp LALT  &lt 7 TAB  &kp SPACE  &kp ESC  &lt 1 SPACE  &lt 2 RET
+      &kp CAPS  &kp Q  &kp W     &kp E      &kp R      &kp T      &kp Y        &kp U      &kp I    &kp O     &kp P       &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S     &kp D      &kp F      &kp G      &kp H        &kp J      &kp K    &kp L  &kp SEMI       &kp APOS
+     &kp LCTRL  &kp Z  &kp X     &kp C      &kp V      &kp B      &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT ESC
+                              &kp LALT  &lt 7 TAB  &kp SPACE  &lt 2 RET  &lt 1 SPACE    &kp ESC
             >;
         };
 
@@ -233,16 +233,6 @@
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &rgb_ug RGB_OFF            &to 6    &bt BT_NXT    &bt BT_PRV  &out OUT_BLE  &out OUT_USB  &out OUT_TOG         &none
           &to 0            &to 1            &to 3            &to 4            &to 5            &to 7    &bt BT_CLR         &none         &none         &none         &none         &none
                                                             &trans           &trans           &trans        &trans        &trans        &trans
-            >;
-        };
-
-        NUMBER {
-            label = "NUMBER";
-            bindings = <
-&none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
-&none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
-&none  &none  &none   &none   &none  &trans   &none   &none   &none  &none  &none  &none
-                     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 

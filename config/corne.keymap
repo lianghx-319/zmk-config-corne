@@ -7,9 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
 //#include <dt-bindings/zmk/mouse.h> /* to be able to use keyboard mouse */
 /*
@@ -81,6 +79,18 @@
             bindings =
                 <&kp LSHFT>,
                 <&kp CAPS>;
+        };
+        tp: tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_PREFERRED";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -209,70 +219,28 @@
         DEFAULT {
             label = "DEFAULT";
             bindings = <
-      &kp CAPS  &kp Q  &kp W     &kp E      &kp R      &kp T           &kp Y        &kp U      &kp I    &kp O     &kp P       &kp BSPC
-      &kp LEFT_SHIFT  &kp A  &kp S     &kp D      &kp F      &kp G           &kp H        &kp J      &kp K    &kp L  &kp SEMI       &kp APOS
-     &kp LCTRL  &kp Z  &kp X     &kp C      &kp V      &kp B           &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mt RALT ESC
-                              &kp LEFT_SHIFT  &lt 6 TAB  &kp SPACE           &kp RET  &lt 1 SPACE    &lt 4 LEFT_GUI
+  &kp TAB  &kp Q  &kp W             &kp E  &kp R               &kp T  &kp Y          &kp U                               &kp I    &kp O     &kp P                   &kp ESC
+&kp LCTRL  &kp A  &kp S             &kp D  &kp F               &kp G  &kp H          &kp J                               &kp K    &kp L  &kp SEMI  &tp LC(LS(LEFT_ALT)) SQT
+&kp LSHFT  &kp Z  &kp X             &kp C  &kp V               &kp B  &kp N          &kp M                           &kp COMMA  &kp DOT  &kp FSLH                 &kp RSHFT
+                         &kp LEFT_COMMAND  &mo 1  &tp LEFT_ALT ENTER  &mo 2  &kp BACKSPACE  &tp LC(LS(LA(LEFT_COMMAND))) SPACE
             >;
         };
 
-        NUMBER {
-            label = "MUMBER";
+        BELOW {
             bindings = <
-       &kp ESC     &kp AT        &kp KP_N1  &kp KP_NUMBER_2  &kp KP_NUMBER_3          &kp DOT  &kp F1   &kp F2   &kp F3   &kp F4  &none  &kp BSPC
-&kp LEFT_SHIFT  &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6         &kp PLUS  &kp F5   &kp F6   &kp F7   &kp F8  &none     &none
-          &key  &kp EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none
-                                                      &mail            &mo 2           &trans  &trans   &trans   &trans
+   &trans  &kp EXCL  &kp AT          &kp HASH  &kp DLLR           &kp PRCNT  &kp CARET       &kp AMPS                            &kp STAR  &kp LPAR  &kp RPAR    &kp BSLH
+   &trans    &kp N1  &kp N2            &kp N3    &kp N4              &kp N5  &kp MINUS      &kp EQUAL                           &kp GRAVE  &kp LBKT  &kp RBKT    &kp PIPE
+&kp LSHFT    &kp N6  &kp N7            &kp N8    &kp N9              &kp N0  &kp UNDER       &kp PLUS                           &kp TILDE  &kp LBRC  &kp RBRC  &kp RSHIFT
+                             &kp LEFT_COMMAND    &trans  &tp LEFT_ALT ENTER     &trans  &kp BACKSPACE  &tp LS(LA(LC(LEFT_COMMAND))) SPACE
             >;
         };
 
-        SETTING {
-            label = "SETTING";
+        ABOVE {
             bindings = <
-&rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF   &rgb_ug RGB_ON  &rgb_ug RGB_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &rgb_ug RGB_OFF            &to 6    &bt BT_NXT    &bt BT_PRV  &out OUT_BLE  &out OUT_USB  &out OUT_TOG         &none
-          &to 0            &to 1            &to 3            &to 4            &to 5            &to 7    &bt BT_CLR         &none         &none         &none         &none         &none
-                                                            &trans           &trans           &trans        &trans        &trans        &trans
-            >;
-        };
-
-        GAME {
-            label = "GAME";
-            bindings = <
-&none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
-&none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
-&none  &none  &none   &none   &none  &trans   &none   &none   &none  &none  &none  &none
-                     &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        MEDIA {
-            label = "MEDIA";
-            bindings = <
-&trans  &trans  &kp C_FAST_FORWARD    &kp C_VOLUME_UP  &kp C_REWIND  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &kp C_PREV   &kp C_PLAY_PAUSE    &kp C_NEXT  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans              &trans  &kp C_VOLUME_DOWN        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                               &trans        &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        LOCK {
-            label = "LOCK";
-            bindings = <
-&none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
-&none  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &none
-&none  &none  &none   &none   &none  &trans   &none   &none   &none  &none  &none  &none
-                     &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        SYMBOLS {
-            label = "SYMBOLS";
-            bindings = <
-&trans  &kp EXCL  &kp AT  &kp POUND  &kp DLLR  &kp PRCNT   &kp CARET   &kp AMPS       &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans    &trans  &trans     &trans    &trans     &trans   &kp MINUS  &kp EQUAL  &kp UNDERSCORE  &kp LBKT  &kp RBKT  &trans
-&trans    &trans  &trans     &trans    &trans     &trans  &kp TILDE2    &kp SQT         &kp DQT  &kp LBRC  &kp RBRC  &trans
-                             &trans    &trans     &trans      &trans      &mo 2          &trans
+    &trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5    &kp F6    &kp F7  &kp F8     &kp F9  &kp F10  &trans
+    &trans        &trans        &trans        &trans        &trans        &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT   &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans    &trans  &trans     &trans   &trans  &trans
+                                              &trans        &trans        &trans    &trans    &trans  &trans
             >;
         };
     };

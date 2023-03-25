@@ -150,7 +150,7 @@
   &kp TAB  &kp Q  &kp W             &kp E  &kp R               &kp T  &kp Y          &kp U                               &kp I    &kp O     &kp P                   &kp ESC
 &kp LCTRL  &kp A  &kp S             &kp D  &kp F               &kp G  &kp H          &kp J                               &kp K    &kp L  &kp SEMI  &tp LC(LS(LEFT_ALT)) SQT
 &kp LSHFT  &kp Z  &kp X             &kp C  &kp V               &kp B  &kp N          &kp M                           &kp COMMA  &kp DOT  &kp FSLH                 &kp RSHFT
-                         &kp LEFT_COMMAND  &mo 1  &tp LEFT_ALT ENTER  &mo 2  &kp BACKSPACE  &tp LS(LA(LC(LEFT_COMMAND))) SPACE
+                         &kp LEFT_COMMAND  &mo 1  &tp LEFT_ALT ENTER  &tp LC(LS(LA(LEFT_COMMAND))) SPACE  &kp BACKSPACE      &mo 2
             >;
         };
 
